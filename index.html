@@ -14,8 +14,7 @@
     <meta property="og:description" content="Descripción de tu página" />
     <meta
       property="og:image"
-      content="URL de la imagen que quieres mostrar en las redes sociales"
-    />
+      content="URL de la imagen que quieres mostrar en las redes sociales" />
     <meta property="og:url" content="URL de tu página" />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -23,8 +22,7 @@
     <meta name="twitter:description" content="Descripción de tu página" />
     <meta
       name="twitter:image"
-      content="URL de la imagen que quieres mostrar en Twitter"
-    />
+      content="URL de la imagen que quieres mostrar en Twitter" />
 
     <!-- App Web, inidicar al navegador que elementos mostrar en un JSON -->
     <link rel="manifest" href="site.webmanifest" />
@@ -34,7 +32,7 @@
 
     <!-- links de estilos -->
     <link rel="stylesheet" href="css/style.css" />
-    
+
     <!-- Se cambia el tema de algunos navegadores -->
     <meta name="theme-color" content="#fafafa" />
     <!-- Código de las plataformas de Análisis -->
@@ -43,27 +41,42 @@
     <script src="preloader.js"></script>
   </head>
   <body>
-    <div id="container">
-      <!-- *** ESTRUCTURA SEMÁNTICA *** -->
-      <!-- Header (encabezado de la página, zona superior) -->
-      <header>
-        <!-- nav (el navegador de toda la web) -->
-        <nav>
-          <a href="" class="link1">link1</a>
-          <a href="" class="link2">link2</a>
-          <a href="" class="link3">link3</a>
-          <a href="" class="link4">link4</a>
+    <section class="container">
+      <!-- HEADER, zona superior que se repite en todos los HTML -->
+      <header class="header">
+        <!-- Logotipo -->
+        <a class="logo" href="index.html">
+          <img
+            class="logo__img"
+            src="svg/logo.svg"
+            alt="logotipo de la marca de la empresa" />
+        </a>
+        <!-- menu de navegación Principal -->
+        <nav class="navprincipal">
+          <a class="navprincipal__trabajos" href="trabajos.html">Inicio</a>
+          <a class="navprincipal__trabajos" href="trabajos.html">Trabajos</a>
+          <a class="navprincipal__servicios" href="servicios.html">Sobre</a>
+          <a class="navprincipal__servicios" href="servicios.html">Servicios</a>
+          <a class="navprincipal__contactar" href="contactar.html">Contactar</a>
         </nav>
       </header>
-      <!-- Main (centro de la página, zona central) -->
       <main>
-        <!-- section y article (posibilidades dentro de main) -->
+        <picture class="main__imagen01">
+          <!-- desktop -->
+          <source
+            srcset="
+              img/desktop/foxflowers-slider-copy-1.webp 1x,
+              img/desktop/banner@2x.webp                2x
+            "
+            media="(min-width:1000px)" />
+          <img
+            src=""
+            alt="nubes altas entre montañas"
+            decoding="async"
+            loading="lazy" />
+        </picture>
       </main>
-      <!-- Footer (final de la página, zona inferior) -->
-      <footer>
-        <h6>&copy;Copyright</h6>
-      </footer>
-    </div>
-
+      <footer>3</footer>
+    </section>
   </body>
 </html>

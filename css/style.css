@@ -25,7 +25,10 @@
   --c-gris_claro: #444444;
   --c-gris_medio_oscuro: #212121;
   --c-verde_oscuro: #434f43;
+  --c-linea: #cecece;
+  --c-footer: rgba(237, 230, 220, 0.42);
 
+  /* Tamaños */
   --tam-max: 1920px;
   --tam-min: 1200px;
 }
@@ -39,6 +42,7 @@ html {
   overflow-x: hidden;
 }
 
+/* Apartado del cuerpo de la pagina */
 body {
   width: min(var(--tam-max), 100%);
 
@@ -49,6 +53,7 @@ body {
     grid-template-rows: repeat(3, auto-fill);
     gap: 8px; */
 
+    /* Aparatado del encabezado */
     & .header {
       background-color: #fff;
       padding: 40px 0px;
@@ -98,6 +103,8 @@ body {
       }
     }
   }
+
+  /* Centro de la pagina */
   & main {
     /* Apartado del banner */
     & .main__imagen01 {
@@ -134,7 +141,6 @@ body {
     /* Fin del encabezado */
 
     /* Apartado de la galeria */
-
     & .main__galeria {
       width: min(var(--tam-min), 100%);
       display: flex;
@@ -216,6 +222,86 @@ body {
         transform: scale(0.98, 0.98);
       }
       /* Fin de la galeria */
+    }
+
+    /* Apartado de contactar */
+    & .main__contactar {
+      width: 100vw;
+      text-align: center;
+      padding: 80px 0;
+      line-height: 50px;
+      letter-spacing: 3px;
+      color: var(--c-gris_medio_oscuro);
+      font-family: ;
+
+      & a {
+        text-decoration: none;
+        color: var(--c-gris_medio_oscuro);
+        padding: 10px 40px;
+        border: 0.5px solid var(--c-gris_claro);
+        text-transform: uppercase;
+        font-size: 13px;
+      }
+    }
+  }
+
+  /* Pie de pagina */
+  & footer {
+    width: 100vw;
+    background-color: var(--c-footer);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: max(var(--tam-min), 100vw);
+    margin: 0 auto;
+    padding: 50px 0;
+
+    & img {
+      max-width: 10%;
+    }
+    & .footer__contenido {
+      width: max(var(--tam-min, 100vw));
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      margin: 0 auto;
+      padding: 40px;
+
+      & .footer__menu {
+        display: flex;
+        gap: 120px;
+        padding: 0 50px;
+
+        & .footer__menu ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+
+          & .footer__menu li {
+            display: inline-block;
+            line-height: 10;
+          }
+        }
+        & :where(a) {
+          text-decoration: none;
+          color: var(--c-gris_medio_oscuro);
+
+          & :hover {
+            color: var(--c-verde_oscuro);
+          }
+        }
+      }
+    }
+    & .footer__linea {
+      border: 1px solid var(--c-linea);
+      width: 70%;
+      margin: 20px 0;
+    }
+
+    & p {
+      font-style: italic;
+      color: var(--c-gris_claro);
     }
   }
 }

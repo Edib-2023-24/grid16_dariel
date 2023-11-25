@@ -24,6 +24,7 @@
   --c-blanco: #fff;
   --c-gris_claro: #444444;
   --c-gris_medio_oscuro: #212121;
+  --c-verde_oscuro: #434f43;
 
   --tam-max: 1920px;
   --tam-min: 1200px;
@@ -35,10 +36,11 @@
 html {
   font-family: "BaskerRegular";
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 body {
-  width: min(var(--tam-max), 100vw);
+  width: min(var(--tam-max), 100%);
 
   & .container {
     width: max(var(--tam-min), 100vw);
@@ -69,6 +71,7 @@ body {
         gap: 20px;
         font-family: "BaskerRegular";
         text-transform: uppercase;
+        padding-right: 20px;
       }
       & a {
         color: var(--c-gris_claro);
@@ -133,39 +136,84 @@ body {
     /* Apartado de la galeria */
 
     & .main__galeria {
+      width: min(var(--tam-min), 100%);
       display: flex;
       justify-content: center;
       align-items: center;
-      width: min(var(--tam-min), 100%);
+      margin: 0 auto;
 
       & .container {
+        background-color: var(--c-blanco);
         display: grid;
         grid-template-columns: 33% 33% 33%;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-        gap: 11px 11px;
         grid-auto-flow: row;
+        gap: 11px 11px;
+        grid-template-areas:
+          "uno uno dos"
+          "uno uno cuatro"
+          "tres cinco cuatro"
+          "tres seis seis"
+          "siete seis seis";
 
-        .uno {
-          grid-area: 1 / 1 / 3 / 3;
+        & .uno {
+          grid-area: uno;
+
+          & figure {
+            position: relative;
+
+            & figcaption {
+              position: absolute;
+              z-index: 10;
+              top: 35%;
+              left: 19%;
+              transform: translateX(-50%);
+              background-color: var(--c-blanco);
+              padding: 50px 150px 50px 20px;
+              text-align: left;
+
+              & h2,
+              p {
+                margin-left: 120px;
+                letter-spacing: 3px;
+                line-height: 2;
+                font-size: 13px;
+              }
+            }
+          }
         }
-        .dos {
-          grid-area: 1 / 3 / 2 / 4;
+
+        & .dos {
+          grid-area: dos;
         }
-        .tres {
-          grid-area: 3 / 1 / 5 / 2;
+
+        & .tres {
+          grid-area: tres;
         }
-        .cinco {
-          grid-area: 3 / 2 / 4 / 3;
+
+        & .cinco {
+          grid-area: cinco;
         }
-        .cuatro {
-          grid-area: 2 / 3 / 4 / 4;
+
+        & .cuatro {
+          grid-area: cuatro;
         }
-        .seis {
-          grid-area: 5 / 1 / 6 / 2;
+
+        & .siete {
+          grid-area: siete;
         }
-        .siete {
-          grid-area: 5 / 1 / 6 / 2;
+
+        & .seis {
+          grid-area: seis;
         }
+      }
+      & :where(figure > img) {
+        -webkit-transition: all 0.6s;
+        transition: all 0.6s;
+      }
+
+      & :where(figure):hover {
+        -webkit-transform: scale(0.98, 0.98);
+        transform: scale(0.98, 0.98);
       }
       /* Fin de la galeria */
     }

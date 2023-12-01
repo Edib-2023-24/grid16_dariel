@@ -161,6 +161,7 @@ body {
           "tres seis seis"
           "siete seis seis";
 
+        /* Caja 1 */
         & .uno {
           grid-area: uno;
 
@@ -188,30 +189,36 @@ body {
           }
         }
 
+        /* Caja 2 */
         & .dos {
           grid-area: dos;
         }
 
+        /* Caja 3 */
         & .tres {
           grid-area: tres;
         }
 
-        & .cinco {
-          grid-area: cinco;
-        }
-
+        /* Caja 4 */
         & .cuatro {
           grid-area: cuatro;
         }
 
-        & .siete {
-          grid-area: siete;
+        /* Caja 5 */
+        & .cinco {
+          grid-area: cinco;
         }
 
+        /* Caja 6 */
         & .seis {
           grid-area: seis;
         }
+        /* Caja 7 */
+        & .siete {
+          grid-area: siete;
+        }
       }
+
       & :where(figure > img) {
         -webkit-transition: all 0.6s;
         transition: all 0.6s;
@@ -232,7 +239,6 @@ body {
       line-height: 50px;
       letter-spacing: 3px;
       color: var(--c-gris_medio_oscuro);
-      font-family: ;
 
       & a {
         text-decoration: none;

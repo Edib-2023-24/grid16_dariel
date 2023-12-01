@@ -17,9 +17,8 @@
   font-family: "Roboto";
   src: url("../font/Roboto.woff2") format("woff2"), url("") format("woff");
 }
-/* ******************************** */
+
 /* Colores */
-/* ******************************** */
 :root {
   --c-blanco: #fff;
   --c-gris_claro: #444444;
@@ -35,7 +34,7 @@
 
 /* *********************************** */
 /* *** ESTILOS GENERALES *** */
-/* *********************************** */
+
 html {
   font-family: "BaskerRegular";
   font-size: 16px;
@@ -65,7 +64,7 @@ body {
       align-items: center;
       justify-content: space-around;
 
-      & .logo {
+      & .header__logo {
         & .logo__img {
           width: 20%;
         }
@@ -148,7 +147,7 @@ body {
       align-items: center;
       margin: 0 auto;
 
-      & .container {
+      & .main__galeria-caja {
         background-color: var(--c-blanco);
         display: grid;
         grid-template-columns: 33% 33% 33%;

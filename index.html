@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- SEO = Básico -->
     <!-- Cada página del sitio tiene que ser diferente el título y la descripción -->
-    <title> Home - Forest Yard Studio</title>
+    <title>Home - Forest Yard Studio</title>
     <meta name="description" content="" />
     <meta name="keywords" content="" />
-    <meta name="autor" content="DarielsMtz 2º DAW (25/11/23)">
+    <meta name="autor" content="DarielsMtz 2º DAW (25/11/23)" />
 
     <!-- Etiquetas Open Graph y Twitter Card, para crear el SEO de Redes Sociales -->
     <meta property="og:title" content="Título de tu página" />
@@ -46,7 +46,7 @@
       <!-- HEADER, zona superior que se repite en todos los HTML -->
       <header class="header">
         <!-- Logotipo -->
-        <a class="logo" href="index.html">
+        <a class="header__logo" href="index.html">
           <img
             class="logo__img"
             src="svg/logo.svg"
@@ -54,7 +54,7 @@
         </a>
         <!-- menu de navegación Principal -->
         <nav class="navprincipal">
-          <a class="navprincipal__trabajos" href="trabajos.html">Inicio</a>
+          <a class="navprincipal__inicio" href="index.html">Inicio</a>
           <a class="navprincipal__trabajos" href="trabajos.html">Trabajos</a>
           <a class="navprincipal__servicios" href="servicios.html">Sobre</a>
           <a class="navprincipal__servicios" href="servicios.html">Servicios</a>
@@ -66,11 +66,7 @@
         <!-- Banner estilo Slide -->
         <picture class="main__imagen01">
           <!-- desktop -->
-          <source
-            srcset="
-              img/desktop/headerbloom-1.webp 1x,
-              img/desktop/banner@2x.webp                2x
-            " />
+          <source srcset="img/desktop/headerbloom-1.webp 1x" />
           <img
             src=""
             alt="nubes altas entre montañas"
@@ -82,85 +78,100 @@
         <section class="main__titulo">
           <h3>Where are a full service creative desig studio</h3>
           <h1>Dedicated to crafting Beautiful Brands</h1>
+          <!-- Linea divisora -->
           <div class="main__titulo-linea"></div>
         </section>
 
         <!-- Galeria de Imagenes -->
         <section class="main__galeria">
-          <div class="container">
+          <article class="main__galeria-caja">
             <!-- Imagen #1 -->
-            <div class="uno">
+            <aside class="uno">
               <figure>
                 <img
                   src="img/desktop/Bloom-and-wild-homepage-1.webp"
-                  alt="Ramos de flores multicolor" decoding="async"
+                  alt="Ramos de flores multicolor"
+                  decoding="async"
                   loading="lazy" />
                 <figcaption>
                   <h2>Bloom & Wild</h2>
                   <p>Branding And Packaging</p>
                 </figcaption>
               </figure>
-            </div>
+            </aside>
+
             <!-- Imagen #2 -->
-            <div class="dos">
+            <aside class="dos">
               <figure>
                 <img
                   src="img/desktop/Replace-an-ocean-raw-copy.webp"
-                  alt="Ramos de flores multicolor" decoding="async"
-                  loading="lazy"/>
+                  alt="Ramos de flores multicolor"
+                  decoding="async"
+                  loading="lazy" />
                 <figcaption></figcaption>
               </figure>
-            </div>
+            </aside>
+
             <!-- Imagen #3 -->
-            <div class="tres">
+            <aside class="tres">
               <figure>
                 <img
                   src="img/desktop/es-home-1.webp"
-                  alt="Ramos de flores multicolor" decoding="async"
-                  loading="lazy"/>
+                  alt="Ramos de flores multicolor"
+                  decoding="async"
+                  loading="lazy" />
                 <figcaption></figcaption>
               </figure>
-            </div>
+            </aside>
+
             <!-- Imagen #5 -->
-            <div class="cinco">
+            <aside class="cinco">
               <figure>
                 <img
                   src="img/desktop/Showcase-Gif.gif"
-                  alt="Ramos de flores multicolor" decoding="async"
-                  loading="lazy"/>
+                  alt="Ramos de flores multicolor"
+                  decoding="async"
+                  loading="lazy" />
                 <figcaption></figcaption>
               </figure>
-            </div>
+            </aside>
+
             <!-- Imagen #4 -->
-            <div class="cuatro">
+            <aside class="cuatro">
               <figure>
                 <img
                   src="img/desktop/Botanical-candle-co-homepage-1.webp"
-                  alt="Ramos de flores multicolor" decoding="async"
-                  loading="lazy"/>
+                  alt="Ramos de flores multicolor"
+                  decoding="async"
+                  loading="lazy" />
                 <figcaption></figcaption>
               </figure>
-            </div>
+            </aside>
+
             <!-- Imagen #6 -->
-            <div class="seis">
+            <aside class="seis">
               <figure>
                 <img
                   src="img/desktop/coffi-lab-front-1.webp"
-                  alt="Ramos de flores multicolor" decoding="async"
-                  loading="lazy"/>
+                  alt="Ramos de flores multicolor"
+                  decoding="async"
+                  loading="lazy" />
                 <figcaption></figcaption>
               </figure>
-            </div>
+            </aside>
+
             <!-- Imagen #7 -->
-            <div class="siete">
+            <aside class="siete">
               <figure>
                 <img
                   src="img/desktop/sw3-1.webp"
-                  alt="Ramos de flores multicolor" decoding="async"
-                  loading="lazy"/>
+                  alt="Ramos de flores multicolor"
+                  decoding="async"
+                  loading="lazy" />
                 <figcaption></figcaption>
-              </div > 
-          </div>
+              </figure>
+            </aside>
+          </article>
         </section>
 
         <!-- Apartado de Contactar -->
@@ -169,41 +180,42 @@
           <p>If you’re interested to see what we can do for your brand</p>
           <a href="#">Let's connect</a>
         </section>
-
       </main>
 
       <!-- Apartado del pied de pagina -->
       <footer>
         <section class="footer__contenido">
-            <img src="svg/Forest-yard-01.png" alt="Forest Yard">
-            <!-- Apartado del menu del pie de paginas -->
-            <nav class="footer__menu">
-                <ul>
-                    <li>More</li>
-                    <li><a href="#">Ryn Frank</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">About</a></li>
-                </ul> 
-    
-                <ul>
-                    <li>Legal</li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Cookies Policy</a></li>
-                </ul>
-    
-                <ul>
-                    <li>Social</li>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Pinterest</a></li>
-                </ul>
-            </nav>
-                
-          </section>
-          <hr class="footer__linea">
-          <p>© Copyright Forest Yard 2021 All rights reserved | Info@forestyard.co.uk </p>
-    </footer>
-  
+          <img src="svg/Forest-yard-01.png" alt="Forest Yard" />
+          <!-- Apartado del menu del pie de paginas -->
+          <nav class="footer__menu">
+            <ul>
+              <li>More</li>
+              <li><a href="#">Ryn Frank</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Portfolio</a></li>
+              <li><a href="#">About</a></li>
+            </ul>
+
+            <ul>
+              <li>Legal</li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Cookies Policy</a></li>
+            </ul>
+
+            <ul>
+              <li>Social</li>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">Pinterest</a></li>
+            </ul>
+          </nav>
+        </section>
+        <!-- Lienas Divisora -->
+        <div class="footer__linea"></div>
+        <p>
+          © Copyright Forest Yard 2021 All rights reserved |
+          Info@forestyard.co.uk
+        </p>
+      </footer>
     </section>
   </body>
 </html>
